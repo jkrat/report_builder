@@ -7,29 +7,25 @@ import createPlotlyRenderers from 'react-pivottable/PlotlyRenderers';
 
 const PlotlyRenderers = createPlotlyRenderers(Plot);
 
-const pivotProps = {
-    rows: ['id'],
-    cols: ['month'],
-    aggregatorName: 'Sum',
-    vals: ['sales'],
+const defaultpivotConfig = {
     renderers: Object.assign({}, TableRenderers, PlotlyRenderers),
-    rendererName: 'Grouped Column Chart',
-    sorters: {},
-    plotlyOptions: {width: 900, height: 500},
-    plotlyConfig: {},
-    tableOptions: {},
-
 }
 
-const Table = (props) => {
+const ReportDisplay = (props) => {
+    const { data, title, config } = props;
+
     return (
-        <div>
-            <PivotTable
-                {...props} 
-                {...pivotProps}
-            />
+        <div style={{display: 'flex', justifyContent: 'center'}}>
+            <div>
+                <div>{title}</div>
+                <PivotTable
+                    data={data}
+                    {...config}
+                    {...defaultpivotConfig}  
+                />
+            </div>
         </div>
     );
 }
 
-export default Table; 
+export default ReportDisplay; 
