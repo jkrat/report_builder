@@ -4,6 +4,7 @@ import 'react-pivottable/pivottable.css';
 import TableRenderers from 'react-pivottable/TableRenderers';
 import Plot from 'react-plotly.js';
 import createPlotlyRenderers from 'react-pivottable/PlotlyRenderers';
+// import createPlotlyRenderers from '../utilities/custom_renderer';
 
 const PlotlyRenderers = createPlotlyRenderers(Plot);
 

@@ -10,10 +10,9 @@ export const reports = [
             "cols": [
                 "Party Size"
             ],
-            "aggregatorName": "Sum over Sum",
+            "aggregatorName": "Sum",
             "vals": [
                 "Tip",
-                "Total Bill"
             ],
             "rendererName": "Grouped Column Chart",
             // "sorters": {
